@@ -1,0 +1,161 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+.page-container {
+  background-color: rgb(200, 200, 200);
+}
+.content-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+.increase-rebirth-button {
+  position: fixed;
+  left: 0;
+  /*display: flex;*/
+  display: flex; /*change this to none if you dont want people to skip levels*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.header > div {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 50px;
+}
+.total-multiplier {
+  display: flex !important;
+}
+.header div #clicks,
+#multiplier,
+#autoclicker,
+#rebirth,
+#total-multiplier {
+  padding-right: 10px;
+}
+#autoclicker-text,
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.auto-time-text,
+#target-clicks {
+  padding: 0px 7px;
+}
+#autoclicker-plural,
+#total-multiplier {
+  padding-right: 7px;
+}
+.reset-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.reset-button #reset {
+  background-color: gray;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  transition: 0.25s;
+  font-size: 1.2em;
+  height: fit-content;
+}
+/*.reset-button #reset:hover{
+  background-color: rgb(200, 0, 0);
+}*/
+.reset-rebirth-button {
+  position: fixed;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.reset-rebirth-button #reset-rebirth {
+  border: none;
+  background-color: red;
+  color: white;
+  transition: 0.25s;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+}
+.reset-rebirth-button #reset-rebirth:hover {
+  background-color: darkred;
+}
+
+.button {
+  width: 100%;
+  margin: 5px;
+}
+
+.button .description {
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upgrade-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10px;
+}
+.upgrade-buttons > div {
+  padding: 10px;
+}
+
+#clickme {
+  width: 300px;
+  border: none;
+  transition: 0.25s;
+  background-color: rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+#clickme:hover {
+  background-color: rgb(150, 150, 150);
+}
+
+#clickme img {
+  width: 100%;
+  height: 100%;
+}
+
+#upgrade,
+#myBtn {
+  text-align: center;
+  border: none;
+  background-color: rgb(50, 100, 255);
+  border-radius: 3px;
+  color: white;
+  transition: 0.25s;
+  font-size: 1.5em;
+  height: fit-content;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#upgrade:hover,
+#myBtn:hover {
+  background-color: rgb(100, 150, 255);
+}

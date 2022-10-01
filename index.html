@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Clicker</title>
+    <link href="clicker_styles.css" rel="stylesheet" type="text/css" />
+    <link href="modal.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="navbar">
+        <a href="/"><i class="fa fa-gamepad icon"></i></a>
+        <!-- icon goes here --->
+        <div class="list">
+          <a href="/">Home</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/contact.html">Contact</a>
+          <a href="/pages/forum.html">Join our Forum</a>
+        </div>
+        <div class="right"></div>
+      </div>
+      <div class="content-wrapper">
+        <div class="content">
+          <div class="modal-stuff">
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="upgrade-buttons">
+                  <div class="click-upgrade">
+                    <div class="button">
+                      <button id="upgrade" onclick="clickUpgrade(100, 1)">
+                        Upgrade - Costs 100 clicks
+                      </button>
+                      <div class="description">Increases clicks by 1</div>
+                    </div>
+                    <div class="button">
+                      <button id="upgrade" onclick="clickUpgrade(1000, 15)">
+                        Mega Upgrade - Costs 1,000 clicks
+                      </button>
+                      <div class="description">Increases clicks by 15</div>
+                    </div>
+                    <div class="button">
+                      <button id="upgrade" onclick="clickUpgrade(10000, 200)">
+                        Ultra Upgrade - Costs 10,000 clicks
+                      </button>
+                      <div class="description">Increases clicks by 200</div>
+                    </div>
+                    <div class="button twoRebirth">
+                      <button
+                        id="upgrade"
+                        onclick="clickUpgrade(1000000, 20000)"
+                      >
+                        Ultimate Upgrade - Costs 1,000,000 clicks
+                      </button>
+                      <div class="description">Increases clicks by 20,000</div>
+                    </div>
+                    <div class="button threeRebirth">
+                      <button
+                        id="upgrade"
+                        onclick="clickUpgrade(10000000, 250000)"
+                      >
+                        CHICKEN NUGGET Upgrade - Costs 10,000,000 clicks
+                      </button>
+                      <div class="description">Increases clicks by 250,000</div>
+                    </div>
+                  </div>
+                  <div class="autoclick-upgrade">
+                    <div class="button">
+                      <button id="upgrade" onclick="addAutoClicker(20, 1)">
+                        Autoclicker - Costs 20 clicks
+                      </button>
+                      <div class="description">
+                        Increases clicks by 1 per
+                        <div class="auto-time-text">5</div>
+                        seconds
+                      </div>
+                    </div>
+                    <div class="button">
+                      <button id="upgrade" onclick="addAutoClicker(200, 15)">
+                        Mega Autoclicker - Costs 200 clicks
+                      </button>
+                      <div class="description">
+                        Increases clicks by 15 per
+                        <div class="auto-time-text">5</div>
+                        seconds
+                      </div>
+                    </div>
+                    <div class="button">
+                      <button id="upgrade" onclick="addAutoClicker(2000,200)">
+                        Ultra Autoclicker - Costs 2,000 clicks
+                      </button>
+                      <div class="description">
+                        Increases clicks by 200 per
+                        <div class="auto-time-text">5</div>
+                        seconds
+                      </div>
+                    </div>
+                    <div class="button twoRebirth">
+                      <button
+                        id="upgrade"
+                        onclick="addAutoClicker(2000000, 200000)"
+                      >
+                        Ultimate Autoclicker - Costs 2,000,000 clicks
+                      </button>
+                      <div class="description">
+                        Increases clicks by 200,000 per
+                        <div class="auto-time-text">5</div>
+                        seconds
+                      </div>
+                    </div>
+                    <div class="button threeRebirth">
+                      <button
+                        id="upgrade"
+                        onclick="addAutoClicker(20000000, 2500000)"
+                      >
+                        CHICKEN NUGGET Autoclicker - Costs 20,000,000 clicks
+                      </button>
+                      <div class="description">
+                        Increases clicks by 2,500,000 per
+                        <div class="auto-time-text">5</div>
+                        seconds
+                      </div>
+                    </div>
+                  </div>
+                  <div class="auto-time-upgrade">
+                    <div class="button oneRebirth" id="fourAuto">
+                      <button
+                        id="upgrade"
+                        onclick="reduceAutoTime(100000, 4000);"
+                      >
+                        Reduce Autoclicking Time - Costs 100,000 clicks
+                      </button>
+                      <div class="description">
+                        Reduces autoclicking time to 4 seconds
+                      </div>
+                    </div>
+                    <div class="button twoRebirth" id="threeAuto">
+                      <button
+                        id="upgrade"
+                        onclick="reduceAutoTime(1000000, 3000);"
+                      >
+                        Mega Reduce Autoclicking Time - Costs 1,000,000 clicks
+                      </button>
+                      <div class="description">
+                        Reduces autoclicking time to 3 seconds
+                      </div>
+                    </div>
+                  </div>
+                  <div class="multiplier-upgrade">
+                    <div class="button fourRebirth" id="fourAuto">
+                      <button
+                        id="upgrade"
+                        onclick="increaseMultiplier(1000000, 0.05);"
+                      >
+                        Click Multiplier - Costs 1,000,000
+                      </button>
+                      <div class="description">
+                        Increases click multiplier by 0.05
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="myBtn">Open Shop</button>
+          </div>
+          <!--<div class="modal-stuff">
+          <div id="settingsModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div class="reset-rebirth-button">
+                <button id="reset-rebirth" onclick="resetRebirth()">Reset Game</button>
+                <div class="description">Warning: Irreversable</div>
+              </div>
+              <div class="increase-rebirth-button">
+                <button id="increase-rebirth" onclick="increaseRebirth()">Skip Stage</button>
+                <div class="description">skip to next stage</div>
+              </div>
+            </div>
+
+          </div>
+          <button id="settingsBtn">Settings</button>
+        </div>-->
+          <div class="header">
+            <div class="score">
+              <h1 id="clicks">0</h1>
+              <h1 id="clicks-text">clicks</h1>
+            </div>
+            <div class="multiplier">
+              <h1 id="multiplier">1</h1>
+              <h1 id="multiplier-text">click per press</h1>
+            </div>
+            <div class="autoclicker">
+              <h1 id="autoclicker">0</h1>
+              <h1 id="autoclicker-text">
+                <div id="autoclicker-plural">clicks</div>
+                per
+                <div class="auto-time-text">5</div>
+                seconds
+              </h1>
+            </div>
+            <div class="total-multiplier fourRebirth">
+              <h1 id="total-multiplier">1</h1>
+              <h1 id="total-multiplier-text">multiplier</h1>
+            </div>
+            <div class="rebirth">
+              <h1 id="rebirth">0</h1>
+              <h1 id="rebirths-text">rebirths</h1>
+            </div>
+          </div>
+          <div class="buttons">
+            <!--<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> -->
+            <button id="clickme" onclick="myFunction()">
+              <img src="green kirb.png" />
+            </button>
+          </div>
+          <div class="reset-button">
+            <!--<button id="reset" onclick="reset()">Next Stage</button>-->
+            <div class="description">
+              Current High Score:
+              <div id="target-clicks">0</div>
+              clicks
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="left-column">
+          <a href="/" class="list-item">Home</a>
+          <a href="/pages/about.html" class="list-item">About</a>
+          <a href="/pages/contact.html" class="list-item">Contact</a>
+          <a href="/pages/forum.html" class="list-item">Join our Forum</a>
+        </div>
+        <div class="right-column">
+          <a href="#cheat-codes">Cheat Codes</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="clicker_script.js" async="true"></script>
+    <script src="modal.js" async="true"></script>
+  </body>
+</html>
